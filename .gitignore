@@ -1,0 +1,6 @@
+migrations
+db.sqlite3
+.env
+requirements.txt
+__pycache__/
+static

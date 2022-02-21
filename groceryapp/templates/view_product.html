@@ -1,0 +1,39 @@
+
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+
+</style>
+</head>
+<body>
+
+<h1>View Product</h1>
+<li><a href="{% url 'add_product' %}">Add Product</a></li>
+<table>
+    <thead>
+        
+        <tr>
+            <th>product_name</th>
+            <th>description</th>
+            <th>product_price</th>
+            <th>category</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cat in pr_cats %}
+        <tr>
+            <td>{{cat.product_name}}</th>
+            <td>{{cat.description}}</th>
+            <td>{{cat.product_price}}</th>
+            <td>{{cat.category}}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<button><a href="{% url 'add_product' %}">Sing up</a></button>
+<li><a href="{% url 'add_product' %}">Add Product</a></li>
+</body>
+</html>
